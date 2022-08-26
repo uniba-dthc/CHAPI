@@ -1,0 +1,233 @@
+esphome:
+  name: ddt-distance-clicker
+  on_boot:
+    - priority: -98
+      # ...
+      then:
+        if:
+          condition:
+            binary_sensor.is_off: display_toggle
+          then: 
+            - switch.turn_on: LEDPINK
+    - priority: -99
+      # ...
+      then:
+        if:
+          condition:
+            binary_sensor.is_on: display_toggle
+          then: 
+            - switch.turn_on: LEDGRUEN
+    - priority: -100
+      # ...
+      then:
+          #- rtttl.play: 'goodbad:d=16,o=5,b=125:a,d6,a,d6,2a,4f,4g,2d,4p,a,d6,a,d6,2a,4f,4g,2c6,4p,a,d6,a,d6,2a,4f,8e,8d,2c,4p,a,d6,a,d6,2a,4g,2d.'
+          - rtttl.play: 'dott:d=4,o=5,b=125:8d#6,16e6,16p,16c#6,16p,16a,16p,16e,16p,d#.,16p,8d#,16e,16p,16a,16p,16c#6,16p,16e6,16p,d#6,f6,8e#.6'
+          #- rtttl.play: 'lninja1:d=4,o=5,b=125:16d6,16c6,16a,16c6,16d6,16a6,16c7,16d7,16c7,16a6,16g6,16a6,16g6,16d6,16c6,16a,16d6,16c6,16a,16c6,16d6,16a6,16c7,16d7,16c7,16a6,16g6,16a6,16g6,16d6,16c6,16a'
+          #- rtttl.play: 'goodbad:d=16,o=5,b=125:a,d6'
+          #- rtttl.play: "mario:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g,8p,8c6,16p,8g,16p,8e,16p,8a,8b,16a#,8a,16g.,16e6,16g6,8a6,16f6,8g6,8e6,16c6,16d6,8b,16p,8c6,16p,8g,16p,8e,16p,8a,8b,16a#,8a,16g.,16e6,16g6,8a6,16f6,8g6,8e6,16c6,16d6,8b,8p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16g#,16a,16c6,16p,16a,16c6,16d6,8p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16c7,16p,16c7,16c7,p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16g#,16a,16c6,16p,16a,16c6,16d6,8p,16d#6,8p,16d6,8p,16c6"
+          #- rtttl.play: "TempleOf:d=4,o=6,b=90:16d,16d,16a,16a,16d7,16d7,16a,16a,16c,16c,16g,16g,16c7,16c7,16g,16g,16g,16g,16d,16d,16g,16g,16a,16a,16a#,16a#,16a,16a,16g,16g,16a,16a,16d,16d,16a,16a,16d7,16d7,16a,16a,16c,16c,16g,16g,16c7,16c7,16g,16g,16g,16g,16d,16d,16g,16g,16a,16a,16a#,16a#,16a,16a,16g,16g,16f,16f"
+          #- rtttl.play: 'doom:d=4,o=5,b=112:16e4,16e4,16e,16e4,16e4,16d,16e4,16e4,16c,16e4,16e4,16a#4,16e4,16e4,16b4,16c,16e4,16e4,16e,16e4,16e4,16d,16e4,16e4,16c,16e4,16e4,a#4,16p,16e4,16e4,16e,16e4,16e4,16d,16e4,16e4,16c,16e4,16e4,16a#4,16e4,16e4,16b4,16c,16e4,16e4,16e,16e4,16e4,16d,16e4,16e4,16c,16e4,16e4,a#4,16p,16a4,16a4,16a,16a4,16a4,16g,16a4,16a4,16f,16a4,16a4,16d#,16a4,16a4,16e,16f,16a4,16a4,16a,16a4,16a4,16g,16a4,16a4,16f,16a4,16a4,d#'
+          #- rtttl.play: 'Indy:d=4,o=5,b=250:e,8p,8f,8g,8p,1c6,8p.,d,8p,8e,1f,p.,g,8p,8a,8b,8p,1f6,p,a,8p,8b,2c6,2d6,2e6,e,8p,8f,8g,8p,1c6,p,d6,8p,8e6,1f.6,g,8p,8g,e.6,8p,d6,8p,8g,e.6,8p,d6,8p,8g,f.6,8p,e6,8p,8d6,2c6'
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "499a8216c6cdd696cd451b0fd6f3338a"
+
+wifi:
+#  ssid: !secret wifi_ssid
+#  password: !secret wifi_password
+  ssid: "wuhotspot"
+  password: "hotspotwu"
+  fast_connect: true
+  id: wuhotspot
+  reboot_timeout: 0s
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+#  ap:
+#    ssid: "Ddt-Distance-Clicker"
+#    password: "HUfrWyO4jABC"
+
+captive_portal:
+
+
+globals:
+  - id: radumfang
+    type: int
+    restore_value: no
+    initial_value: '10'
+  - id: distance_total
+    type: int
+    restore_value: no
+    initial_value: '0'
+  - id: automode
+    type: boolean
+    restore_value: no
+    initial_value: 'false'
+
+output:
+  - platform: ledc
+    pin: GPIO22
+    inverted: true
+    id: rtttl_out
+
+switch:
+  - platform: gpio
+    id: LEDPINK
+    pin: GPIO33
+    name: "ledlive"
+    interlock: [LEDGRUEN]
+  - platform: gpio
+    id: LEDGRUEN
+    pin: GPIO32
+    name: "ledset"
+    interlock: [LEDPINK]
+  - platform: gpio
+    id: 'relay2'
+    name: "Relay2"
+    pin: GPIO17
+  - platform: gpio
+    id: 'relay1'
+    name: "Relay1"
+    pin: GPIO16
+
+rtttl:
+  output: rtttl_out
+
+binary_sensor:
+  - platform: gpio
+    name: "toggleLED"
+    id: 'display_toggle'
+    pin: 
+      number: GPIO23
+      mode:
+        input: true
+        pullup: true
+      #inverted: true
+    on_press:
+      then:
+        - switch.turn_on: LEDGRUEN
+    on_release:
+      then:
+        - switch.turn_on: LEDPINK
+  - platform: gpio
+    id: 'mod1'
+    pin: 
+      number: GPIO5
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    on_press:
+      then:
+        - if: 
+            condition:
+              lambda: 'return id(automode) == true;'
+            then:
+              - globals.set:
+                  id: automode
+                  value: 'false'
+            else: 
+              - globals.set:
+                  id: automode
+                  value: 'true'
+  - platform: gpio
+    id: 'mod2'
+    pin: 
+      number: GPIO13
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    on_press:
+      then:
+        - switch.turn_on: relay2
+    on_release:
+      then:
+        - switch.turn_off: relay2
+  - platform: gpio
+    id: 'reset'
+    pin: 
+      number: GPIO25
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_on: 1000ms
+    on_press:
+      then:
+        - lambda: |-
+            id(distance_total) = 0;
+      
+# http://mikrocontroller-blog.de/boards/arduino/lineares-hallsensor-modul-ky-024-fuer-arduino/
+  - platform: gpio
+    id: 'hallvorn'
+    name: "hallsensor-vorn"
+    pin:
+      number: GPIO21
+      mode:
+        input: true
+        pullup: true
+#      inverted: true
+    on_press:
+      then:
+    on_release:
+      then:
+        - lambda: |-
+            id(distance_total) += id(radumfang);
+        - if: # reset counter
+            condition:
+              lambda: 'return id(distance_total) >= id(radumfang) * int(id(my_rotary_encoder).state);'
+            then:
+              #- rtttl.play: 'TempleOf:d=4,o=6,b=90:16d,16d,16a,16a'
+              #- rtttl.play: 'doom:d=4,o=5,b=112:16e4,16e4,16e,16e4,16e4,16d'
+              - rtttl.play: 'Indy:d=4,o=5,b=250:e,8p'
+              - lambda: |-
+                  id(distance_total) = 0;
+              - if:
+                  condition:
+                    lambda: 'return id(automode) == true;'
+                  then:
+                  - switch.turn_on: relay2
+                  - delay: 100ms
+                  - switch.turn_off: relay2
+            
+
+sensor:
+  - platform: rotary_encoder
+    name: "Rotary Encoder"
+    id: my_rotary_encoder
+    pin_a: GPIO1
+    pin_b: GPIO26
+    restore_mode: ALWAYS_ZERO
+    publish_initial_value: yes
+    min_value: 1
+      
+        
+display:
+    platform: tm1637
+    id: tm1637_display
+    clk_pin: GPIO14
+    dio_pin: GPIO27
+    length: 4
+    update_interval: 200ms
+    lambda: !lambda |-
+      if (id(display_toggle).state) {
+        it.printf( 0, "%04d", (id(distance_total)) );
+      } else {
+        it.printf( 0, "%04d", (id(radumfang) * int(id(my_rotary_encoder).state)) );
+      }
+
+
+
+

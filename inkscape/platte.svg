@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="platte.svg"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.3593849"
+     inkscape:cx="-2584.9723"
+     inkscape:cy="-641.37364"
+     inkscape:window-width="1366"
+     inkscape:window-height="703"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.51042;fill:#0000ff;stroke-width:0.153913"
+       id="rect871"
+       width="400"
+       height="400"
+       x="-880.66754"
+       y="-327.6893" />
+    <g
+       id="g817"
+       transform="rotate(90,-462.37155,-462.2247)"
+       style="fill:#ff00ff">
+      <circle
+         style="opacity:0.51042;fill:#ff00ff;stroke-width:0.0697235"
+         id="path184-3-6"
+         cx="-292.58615"
+         cy="-377.17871"
+         r="5.25" />
+      <circle
+         style="opacity:0.51042;fill:#ff00ff;stroke-width:0.0697235"
+         id="path184-3-7"
+         cx="-174.58615"
+         cy="-377.17871"
+         r="5.25" />
+      <circle
+         style="opacity:0.51042;fill:#ff00ff;stroke-width:0.0697235"
+         id="path184-3-5"
+         cx="-174.58615"
+         cy="-110.67871"
+         r="5.25" />
+      <circle
+         style="opacity:0.51042;fill:#ff00ff;stroke-width:0.0697235"
+         id="path184-3-3"
+         cx="-292.58615"
+         cy="-110.67871"
+         r="5.25" />
+      <rect
+         style="opacity:0.51042;fill:#ff00ff;stroke-width:0.21185"
+         id="rect711"
+         width="128.5"
+         height="277"
+         x="-297.83615"
+         y="-382.42871" />
+    </g>
+  </g>
+</svg>
