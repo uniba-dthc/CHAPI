@@ -1,0 +1,2 @@
+up:
+	esphome dashboard config/
