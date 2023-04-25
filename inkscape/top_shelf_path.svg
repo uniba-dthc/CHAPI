@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="400mm"
+   height="494.64758mm"
+   viewBox="0 0 400 494.64758"
    version="1.1"
    id="svg5"
    sodipodi:docname="platte_path.svg"
-   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,21 +24,27 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.78697568"
-     inkscape:cx="-3292.3508"
-     inkscape:cy="-755.4236"
-     inkscape:window-width="1366"
-     inkscape:window-height="703"
-     inkscape:window-x="0"
+     inkscape:zoom="0.3493124"
+     inkscape:cx="780.104"
+     inkscape:cy="197.53092"
+     inkscape:window-width="1920"
+     inkscape:window-height="1121"
+     inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:pageshadow="2"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs2" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(880.66754,422.33688)">
     <rect
        style="opacity:0.51042;fill:#0000ff;stroke-width:0.153913"
        id="rect871"
