@@ -18,12 +18,12 @@ ota:
 wifi:
 #  ssid: !secret wifi_ssid
 #  password: !secret wifi_password
-  ssid: "wuhotspot"
-  password: "hotspotwu"
+  ssid: "hotspot"
+  password: "spothot"
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Ddt-Distance-Clicker"
+    ssid: "Testboi Fallback Hotspot"
     password: "HUfrWyO4jABC"
 
 captive_portal:
@@ -34,12 +34,12 @@ switch:
     name: "Relay"
     id: relay1
     pin: GPIO23
-    
+
 binary_sensor:
   - platform: gpio
     name: "mod1"
     id: 'mod1'
-    pin: 
+    pin:
       number: GPIO34
     on_press:
       then:
