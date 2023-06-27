@@ -1,5 +1,5 @@
 esphome:
-  name: "ddt-chapie-mainbrain"
+  name: "chapi-mainbrain"
   on_boot:
     - priority: -98
       # ...
@@ -7,7 +7,7 @@ esphome:
         if:
           condition:
             binary_sensor.is_off: display_toggle
-          then: 
+          then:
             - switch.turn_on: LEDPINK
     - priority: -99
       # ...
@@ -15,7 +15,7 @@ esphome:
         if:
           condition:
             binary_sensor.is_on: display_toggle
-          then: 
+          then:
             - switch.turn_on: LEDGRUEN
     - priority: -100
       # ...
@@ -46,15 +46,15 @@ ota:
 wifi:
 #  ssid: !secret wifi_ssid
 #  password: !secret wifi_password
-#  ssid: "wuhotspot"
-#  password: "hotspotwu"
+#  ssid: "hotspot"
+#  password: "spothot"
 #  fast_connect: true
-#  id: wuhotspot
+#  id: hotspot
 #  reboot_timeout: 0s
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "ddt-chapie"
+    ssid: "chapi"
 
 web_server:
   local: true
@@ -106,7 +106,7 @@ binary_sensor:
   - platform: gpio
     name: "toggleLED"
     id: 'display_toggle'
-    pin: 
+    pin:
       number: GPIO23
       mode:
         input: true
@@ -120,7 +120,7 @@ binary_sensor:
         - switch.turn_on: LEDPINK
   - platform: gpio
     id: 'mod1'
-    pin: 
+    pin:
       number: GPIO5
       mode:
         input: true
@@ -128,20 +128,20 @@ binary_sensor:
       inverted: true
     on_press:
       then:
-        - if: 
+        - if:
             condition:
               lambda: 'return id(automode) == true;'
             then:
               - globals.set:
                   id: automode
                   value: 'false'
-            else: 
+            else:
               - globals.set:
                   id: automode
                   value: 'true'
   - platform: gpio
     id: 'mod2'
-    pin: 
+    pin:
       number: GPIO13
       mode:
         input: true
@@ -155,7 +155,7 @@ binary_sensor:
         - switch.turn_off: relay2
   - platform: gpio
     id: 'reset'
-    pin: 
+    pin:
       number: GPIO25
       mode:
         input: true
@@ -167,7 +167,7 @@ binary_sensor:
       then:
         - lambda: |-
             id(distance_total) = 0;
-      
+
 # http://mikrocontroller-blog.de/boards/arduino/lineares-hallsensor-modul-ky-024-fuer-arduino/
   - platform: gpio
     id: 'hallvorn'
@@ -200,7 +200,7 @@ binary_sensor:
                   - switch.turn_on: relay2
                   - delay: 100ms
                   - switch.turn_off: relay2
-            
+
 
 sensor:
   - platform: rotary_encoder
@@ -211,8 +211,8 @@ sensor:
     restore_mode: ALWAYS_ZERO
     publish_initial_value: yes
     min_value: 1
-      
-        
+
+
 display:
     platform: tm1637
     id: tm1637_display
