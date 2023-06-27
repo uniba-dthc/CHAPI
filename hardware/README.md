@@ -28,13 +28,16 @@
 	* boxes generated with [boxes.py](https://www.festi.info/boxes.py/)
 * Lots of hot glue
 
-# Build
+# Details
+
 ## Wheel
 
+![](hardware/chapi_wheel_mounted.jpg)
 
 ## Mainbrain
-![](hardware/mainbrain_top.jpg)
 
-![](hardware/mainbrain_side.jpg)
+![](hardware/chapi_mainbrain_top.jpg)
 
-![](hardware/mainbrain_inside.jpg)
+![](hardware/chapi_mainbrain_side.jpg)
+
+![](hardware/chapi_mainbrain_inside.jpg)

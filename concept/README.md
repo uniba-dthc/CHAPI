@@ -10,7 +10,7 @@ We had over 8m clearance to the ceiling and had a completely empty room.
 We secured a tripod on a small portable golf cart and attached three (Weikersheim) or four (Dresden) cameras on a bar.
 
 
-![Golf cart with four cameras](concept/photogrammetry_dresden.jpg)
+![Golf cart with four cameras](concept/dresden_photogrammetry.jpg)
 
 
 
@@ -22,6 +22,6 @@ Our first step of taking on that challenge was to tape a camera to a rolling boa
 Also we conducted a test with a tripod on its smallest extension for capturing the wall parts of the fresco.
 Both setups were operated by two persons, one moving the board around in a planed out grid, the other one operating a laptop for validating the image quality and giving instructions to the board person.
 
-![Rolling board with a camera taped to it](concept/rollingboardandtape1.jpg)
-![Rolling board with a camera and ring flash taped to it](concept/rollingboardandtape2.jpg)
-![Rolling board with a tripod taped to it carrying the ring flash with camera](concept/rollingboardandtripod.jpg)
+![Rolling board with a camera taped to it](concept/ansbach_rollingboardandtape1.jpg)
+![Rolling board with a camera and ring flash taped to it](concept/ansbach_rollingboardandtape2.jpg)
+![Rolling board with a tripod taped to it carrying the ring flash with camera](concept/ansbach_rollingboardandtripod.jpg)

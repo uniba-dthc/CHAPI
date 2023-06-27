@@ -3,10 +3,10 @@
 
 
 
-# glider support
+# Glider support
 
 This support provides more stability to the quick release gilder on both sides of CHAPI.
 
-[pipe support](openscad/rohraufleger.stl)
+![](hardware/parts-3dprint/pipebracket.stl)
 
-[pipe inserts](openscad/lochhuelsen8-6.stl)
+![](hardware/parts-3dprint/pipeinserts8-6.stl)

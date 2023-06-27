@@ -1,0 +1,24 @@
+{
+  "spellcheckLanguages": [
+    "de"
+  ],
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "livePreview": false,
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "alwaysUpdateLinks": true,
+  "readableLineLength": false,
+  "promptDelete": false,
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./",
+  "newLinkFormat": "relative"
+}

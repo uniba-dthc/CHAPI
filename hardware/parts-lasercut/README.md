@@ -4,13 +4,14 @@ For some parts there are previous versions and experimental files available. Fin
 
 # Mainbrain
 
-![](inkscape/main_ElectronicsBox.svg)
-![](inkscape/main_sidepanel_path.svg)
-![](inkscape/main_toppanel_path.svg)
+![](hardware/parts-lasercut/main_ElectronicsBox.svg)
+![](hardware/parts-lasercut/main_sidepanel_path.svg)
+![](hardware/parts-lasercut/main_toppanel_path.svg)
 
 # Wheel
 
-![](inkscape/wheel_magnetring_path_770_bigring.svg)
+![](hardware/parts-lasercut/wheel_magnetring_path_770_bigring.svg)
 
 # Top
-![](inkscape/top_shelf_opt_path.svg)
+
+![](hardware/parts-lasercut/top_shelf_opt_path.svg)
