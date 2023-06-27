@@ -1,40 +1,27 @@
-# Parts
 
-* Walking Frame 
-	* MEYRA Ideal Rollator, Silber 
-	* Product number: 3061982
-	* Weight: ca 9 kg
-	* Max. load: 130 kg
-	* PU-tires
-	* [MEYRA Manuals](http://kisss-by-meyra.de/ALLdokuarchiv.php?suche=Ideal%20Rollator)
-	* [MEYRA Produkt Page](https://www.meyra.de/reha-pflege-alltagshilfen/reha-und-alltag/reha-alltag-details/product-313/)
-* ESPdevboard
-* Raspberry Pi Pico
-	* [Documentation](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
-* Other Electronics Parts
-	* Modules
-		* TM1637 4 Digit 7-Segment Display  
-		* Rotary Encoder
-		* Linear Magnetic Hall Sensor
-	* Kailh BOX Jade Switches
-	* Audio Jack 3.5mm
-	* LEDs
-	* JST-SM 2.54 2pin terminal connector wire cable
-* Construction Profiles
-	* 40x40 Type I from [Dold Mechatronik](https://www.dold-mechatronik.de/Aluminum-profile-40x40L-I-type-groove-8)
-* Printed parts
-	* created with [openscad](https://openscad.org/)
-* Lasercut parts
-	* boxes generated with [boxes.py](https://www.festi.info/boxes.py/)
-* Lots of hot glue
+# Overview
 
-# Build
-## Wheel
+![](hardware/chapi_parts_annotated.jpg)
+
+CHAPI is constructed to be assembled and dissembled for ease of transportation. 
+As of now the only tool needed is a singe allen key, with the goal of converting all joints to tool less fasteners in the future.
 
 
-## Mainbrain
-![](hardware/mainbrain_top.jpg)
+# Setup
 
-![](hardware/mainbrain_side.jpg)
+1. Fold up the walking frame and extend the handles to a comfortable height.
+2. Attach the wooden top plate to the walking frame.
+3. Attach the construction profiles to the frame by sliding them onto the gliders.
+4. Build with the other construction profiles to the desired height and angle.
+5. Connecting the main brain to all the sensors and laptop is just plug and play.
+	1. Connect the hall sensor next to the wheel.
+	2. Connect the button on the handle.
+	3. Connect the laptop to the Raspberry Pi Pico on the side of the main brain.
+	4. Connect the main brain ESP32 to a power source, such as a power bank.
+6. Add the camera and connect it to the laptop.
 
-![](hardware/mainbrain_inside.jpg)
+Happy imaging!
+
+
+Heres an example setup we used while imaging in Ansbach
+![Setup example form Ansbach](hardware/chapi_in_ansbach.jpg)
